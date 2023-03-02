@@ -10,7 +10,6 @@ import java.io.FileWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-//nursey
 public class Manager {
     public static final String fileJSON = "fileManagerJSON.json";
 
@@ -30,7 +29,6 @@ public class Manager {
                 throw new NegativeDeadlineException(deadline);
             }
         } catch (InputMismatchException e) {
-//            e.printStackTrace();
             System.out.println("Ошибка: InputMismatchException ");
             deadline = 0;
         } catch (NegativeDeadlineException e) {
@@ -45,7 +43,6 @@ public class Manager {
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("fullName", fullName);
         jsonObj.put("deadline", deadline);
-//        jsonObj.put("text", null);
 
 
         File file = new File(fileJSON);

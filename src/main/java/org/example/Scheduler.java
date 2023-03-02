@@ -2,11 +2,8 @@ package org.example;
 
 import java.util.Date;
 
-//animal
 public abstract class Scheduler implements Alertable, ConvertAlertMessages {
 
-    private int dataAdd;
-    private int timeAdd;
     private int deadline;
     private String fullName;
     private String text;
@@ -22,44 +19,23 @@ public abstract class Scheduler implements Alertable, ConvertAlertMessages {
 
     public final int created() {
         Date currentDate = new Date();
-//        int days = (int) (currentDate.getTime() - this.dateCreated.getTime()) / (60 * 60 * 24 * 1000);
         int seconds = (int) (currentDate.getTime() - this.dateCreated.getTime()) / (1000);
 
         return seconds;
     }
 
 
-    public int getDataAdd() {
-        return dataAdd;
-    }
 
-    public void setDataAdd(int dataAdd) {
-        this.dataAdd = dataAdd;
-    }
-
-    public int getTimeAdd() {
-        return timeAdd;
-    }
-
-    public void setTimeAdd(int timeAdd) {
-        this.timeAdd = timeAdd;
-    }
 
     public int getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(int deadline) {
-        this.deadline = deadline;
-    }
 
     public String getFullName() {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
 
     public String getText() {
         return text;
