@@ -9,11 +9,7 @@ public class User extends Scheduler {
         if (fullName.equals("")) {
             this.alertWarning(0);
         }
-//        if (text.equals("")) {
-//            this.alertWarning(2);
-//        }
     }
-
 
     boolean addNote(int id, String fullName) {
         //...
